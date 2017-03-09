@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>OrderJS</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row topbar">
+            <div class="col-md-12">
+                <button class="btn btn-success addproduct" data-toggle="modal" data-target="#modalfornewproduct">NEW PRODUCT</button>
+                <button class="btn btn-info orders" data-toggle="modal" data-target="#modalfororders">ORDERS</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="products">
+    </div>
+
+    <!-- Modal for New Product -->
+    <div class="modal fade" id="modalfornewproduct" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Add New Product</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="forProductName">Product Name</label>
+                            <input type="text" class="form-control" id="forProductName" placeholder="Product Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="forProductPrice">Product Price</label>
+                            <input type="text" class="form-control" id="forProductPrice" placeholder="Product Price">
+                        </div>
+                        <div class="form-group">
+                            <label for="forProductDescription">Product Description</label>
+                            <textarea class="form-control" id="forProductDescription" cols="30" rows="10"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="forProductImagee">Product Image</label>
+                            <input class="form-control" type="file" id="forProductImagee">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary newproduct">Save changes</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+
+    <!-- Modal for Orders -->
+    <div class="modal fade" id="modalfororders" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Orders list</h4>
+                </div>
+                <div class="modal-body">
+                    <ul class="orderslist list-group">
+                        
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary buyproducts">Send</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
